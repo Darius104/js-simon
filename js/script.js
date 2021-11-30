@@ -19,13 +19,18 @@ console.log('array casuale: ' + myArray);
 const containerSeconds = document.getElementById('containerSeconds'); 
 let seconds = parseInt(containerSeconds.textContent);
 
+//creo la funzione timer
 const timer = setInterval(function(){
     seconds = seconds - 1;
     if  ( seconds === - 1 ){
         clearInterval(timer);
-        
+        // vado a ciclare 5 volte la richiesta " Inserisci numero "
         for( let j = 0; j < 5; j++){
             userNumber = parseInt(prompt("Inserisci un numero per indovinare la lista precedente"));
+            // faccio un'altro loop per ciclare tutti i 5 numeri inseriti precedentemente dall'utente
+            // e controllo se il numero inserito dall'utente è uguale alla lista
+            // se è corretto push sull'array di corectNumbers
+            // se il numero è correcto pussho la lunghezza di corectNumbers in quantitaNumeri
             for( let y = 0; y < 5; y++ ){
                 if(userNumber === myArray[y]){
                     corectNumbers.push(userNumber);
