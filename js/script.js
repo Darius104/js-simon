@@ -37,7 +37,7 @@ const timer = setInterval(function(){
         containerSeconds.innerHTML = seconds;
     }
 
-}, 100 );
+}, 1000 );
 
     console.log(corectNumbers);
     console.log(quantitaNumeri);
