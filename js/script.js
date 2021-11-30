@@ -4,28 +4,43 @@
 
 //genero i miei 5 numeri e li inserisco all'interno di un array
 let myArray = [];
+let userNumber;
+let corectNumbers = [];
+let quantitaNumeri = [];
+
 for ( let i = 0; i < 5; i++ ){
     let number = getRndInteger(1, 50);
     alert(number);
     myArray.push(number);
 }
-console.log(myArray);
+console.log('array casuale: ' + myArray);
 
 //prendo dal dom il contenitore e il suo contenuto andandolo a mettere all'interno di let seconds
 const containerSeconds = document.getElementById('containerSeconds'); 
 let seconds = parseInt(containerSeconds.textContent);
-console.log(seconds);
 
 const timer = setInterval(function(){
     seconds = seconds - 1;
     if  ( seconds === - 1 ){
         clearInterval(timer);
+        
+        for( let j = 0; j < 5; j++){
+            userNumber = parseInt(prompt("Inserisci un numero per indovinare la lista precedente"));
+            for( let y = 0; y < 5; y++ ){
+                if(userNumber === myArray[y]){
+                    corectNumbers.push(userNumber);
+                    quantitaNumeri.push(corectNumbers.length);
+                }
+            }
+        }
     }else{
         containerSeconds.innerHTML = seconds;
     }
-    
+
 }, 100 );
 
+    console.log(corectNumbers);
+    console.log(quantitaNumeri);
 //-----------------------
 // FUNCTION
 //-----------------------
