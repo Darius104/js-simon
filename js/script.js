@@ -2,7 +2,6 @@
 // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
-//genero i miei 5 numeri e li inserisco all'interno di un array
 let myArray = [];
 let userNumber;
 let corectNumbers = [];
